@@ -23,49 +23,163 @@ window.IC_SAMPLE_SETUP = {
     }
   },
   "static": {
-    // START: Demo setup
-    "layout": {
-      "headerButtons": [
-        {
-          "label": "Button 1",
-          "action": {
-            "fnKey": "goToState",
-            "params": {
-              "stateName": "state-1",
-              "stateParams": {}
-            }
-          }
-        },
-        {
-          "label": "Button 2",
-          "action": {
-            "fnKey": "goToState",
-            "params": {
-              "stateName": "state-2",
-              "stateParams": {}
-            }
-          }
-        }
-      ]
-    }
-    // END: Demo setup
+    "logo": {
+      "url": "https://ic-core-assets.s3.us-east-2.amazonaws.com/ic-webapps/landing/ic/images/ic-logo-darkgrey.png",
+      "heightScale": 3,
+    },
+    "titlePosition": "left"
   },
   "states": [
     {
-      "key": "state-1",
+      "key": "login",
       "params": {
         "stores": [],
         "content": {
-          "title": "State 1"
+
+          "itemsGroups": [
+            {
+              "name": "Projects",
+              "items": [
+                {
+                  "title": "Title",
+                  "description": "Description",
+                  "|#|action": {
+                    "fnKey": "consoleLog",
+                    "params": {
+                      "asd": 123
+                    }
+                  }
+                },
+                {
+                  "title": "Title",
+                  "subtitle": "Subtitle",
+                  "description": "Description",
+                  "|#|action": {
+                    "fnKey": "consoleLog",
+                    "params": {
+                      "asd": 123
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Projects",
+              "items": [
+                {
+                  "title": "Title",
+                  "description": "Description",
+                  "|#|action": {
+                    "fnKey": "consoleLog",
+                    "params": {
+                      "asd": 123
+                    }
+                  }
+                },
+                {
+                  "title": "Title",
+                  "subtitle": "Subtitle",
+                  "description": "Description",
+                  "|#|action": {
+                    "fnKey": "consoleLog",
+                    "params": {
+                      "asd": 123
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+
+          "buttons": [
+            {
+              "label": "Forgot password? Click here",
+              "position": "left",
+              "|#|action": {
+                "fnKey": "goToState",
+                "params": {
+                  "stateName": "register"
+                }
+              }
+            },
+            {
+              "label": "Login",
+              "type": "main",
+              "position": "center",
+              "highlighted": true,
+              "|#|action": {
+                "fnKey": "consoleLog",
+                "params": {
+                  "|&|formParm": "&.stateStores.formValues"
+                }
+              }
+            },
+            {
+              "label": "Create an account",
+              "position": "center",
+              "|#|action": {
+                "fnKey": "goToState",
+                "params": {
+                  "stateName": "register"
+                }
+              }
+            }
+          ]
+          
+        
         }
       }
     },
     {
-      "key": "state-2",
+      "key": "register",
       "params": {
         "stores": [],
         "content": {
-          "title": "State 2"
+
+          "title": "Register",
+          "itemsGroups": [
+            {
+              "name": "Projects",
+              "items": [
+                {
+                  "title": "Title",
+                  "description": "Description",
+                  "|#|action": {
+                    "fnKey": "consoleLog",
+                    "params": {
+                      "asd": 123
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "buttons": [
+            {
+              "label": "Register",
+              "type": "main",
+              "position": "center",
+              "highlighted": true,
+              "|#|action": {
+                "fnKey": "consoleLog",
+                "params": {
+                  "|&|formParm": "&.stateStores.formValues"
+                }
+              }
+            },
+            {
+              "label": "Login to account",
+              "position": "center",
+              "|#|action": {
+                "fnKey": "goToState",
+                "params": {
+                  "stateName": "login"
+                }
+              }
+            }
+          ]
+          
+        
         }
       }
     }

@@ -38,6 +38,10 @@ window.IC_SAMPLE_SETUP = {
 
           "itemsGroups": [
             {
+              "name": "Test",
+              "items": []
+            },
+            {
               "name": "Projects",
               "items": [
                 {

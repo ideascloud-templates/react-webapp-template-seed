@@ -51,7 +51,7 @@ const App = () => {
                 {/* Inputs container */}
                 <div style={{ marginBottom: 25 }}>
 
-                  {dynamicSetup.content.itemsGroups.map((itmGroup, idx) => {
+                  {dynamicSetup.content.itemsGroups.filter(ig => !!ig.items.length).map((itmGroup, idx) => {
                     return (
                       <div key={idx} style={{ marginBottom: '1.5rem' }}>
                         <p style={{ marginBottom: '0.8rem', color: stylingSetup.layout.bgContainers.colors.font, opacity: 0.6, fontSize: '1rem' }}>{ itmGroup.name }</p>

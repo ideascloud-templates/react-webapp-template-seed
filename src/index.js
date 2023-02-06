@@ -48,6 +48,13 @@ const App = () => {
                   </div>
                 )}
 
+                {/* Title */}
+                {!!staticSetup.content.title && (
+                  <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+                    <h1 style={{ fontWeight: 'normal', fontSize: '2rem' }}>{ staticSetup.content.title }</h1>
+                  </div>
+                )}
+
                 {/* Inputs container */}
                 <div style={{ marginBottom: 25 }}>
 

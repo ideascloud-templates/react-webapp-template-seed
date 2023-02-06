@@ -23,6 +23,7 @@ window.IC_SAMPLE_SETUP = {
     }
   },
   "static": {
+    "title": "Webapp title",
     "logo": {
       "url": "https://ic-core-assets.s3.us-east-2.amazonaws.com/ic-webapps/landing/ic/images/ic-logo-darkgrey.png",
       "heightScale": 3,
